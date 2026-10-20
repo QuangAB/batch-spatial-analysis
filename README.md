@@ -1,10 +1,12 @@
 # Công cụ Tự động hóa Phân tích Vùng đệm và Chồng lớp Không gian (PyQGIS)
 
-## 📌 Giới thiệu dự án
+## 📌 Giới thiệu Dự án
 
-Dự án này xây dựng một quy trình tự động hóa phân tích không gian hàng loạt (Batch Spatial Analysis) bằng ngôn ngữ Python và thư viện **PyQGIS** chạy trực tiếp trong môi trường QGIS để tối ưu hóa quy trình phân tích không gian lặp đi lặp lại. Chương trình này thay thế các thao tác thủ công tốn thời gian trên phần mềm máy tính bằng một quy trình xử lý hàng loạt mạnh mẽ, giúp tự động hóa các tác vụ:
+Dự án này xây dựng một quy trình tự động hóa phân tích không gian hàng loạt (Batch Spatial Analysis) tại khu vực Thành phố Hồ Chí Minh bằng ngôn ngữ Python và thư viện **PyQGIS** chạy trực tiếp trong môi trường QGIS để tối ưu hóa quy trình phân tích không gian lặp đi lặp lại.
 
-    1. Chuẩn hóa hệ tọa độ phẳng quốc gia VN-2000.
+Chương trình này thay thế các thao tác thủ công tốn thời gian trên phần mềm máy tính bằng một quy trình xử lý hàng loạt mạnh mẽ, giúp tự động hóa các tác vụ như:
+
+    1. Chuẩn hóa hệ tọa độ vuông góc phẳng quốc gia VN-2000.
 
     2. Tạo vùng đệm (Buffer) hành lang an toàn 50m cho hệ thống đường giao thông chính.
 
@@ -53,7 +55,7 @@ batch_spatial_analysis/
 
 1. **Quản lý Cấu trúc & Xóa Dữ liệu cũ**: Tự động tạo cấu trúc thư mục làm việc và dọn dẹp các tập tin kết quả từ lần chạy trước để tránh xung  đột với dữ liệu trước.
 
-2. **Chuyển đổi Hệ tọa độ (Reproject)**: Chuyển các lớp dữ liệu vector từ hệ tọa độ địa lý WGS84 sang VN-2000 / TM-3 105-45 (EPSG:9210) để đảm bảo tính toán khoảng cách và diện tích theo đơn vị mét chuẩn xác.
+2. **Chuyển đổi Hệ tọa độ (Reproject)**: Chuyển đổi hệ tọa độ các lớp dữ liệu vector từ hệ tọa độ địa lý WGS 84 sang hệ tọa độ quốc gia VN-2000 / TM-3 105-45 (EPSG:9210) để đảm bảo tính toán khoảng cách và diện tích theo đơn vị mét chuẩn xác.
 
 3. **Phân tích Vùng đệm (Buffer)**: Tạo hành lang an toàn giao thông với bán kính 50 mét xung quanh các tuyến đường chính.
 
@@ -174,7 +176,7 @@ print("🎉 Hoàn thành toàn bộ quy trình tự động hóa phân tích kh�
 
 ### Chạy script bên trong QGIS Python Console
 
-1. Mở **QGIS Desktop**.
+1. Mở phần mềm **QGIS Desktop**.
 
 2. Mở **Python Console** (`Ctrl + Alt + P`) và khởi động **Editor**.
 
