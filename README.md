@@ -14,6 +14,8 @@ Chương trình này thay thế các thao tác thủ công tốn thời gian tr�
 
     4. Tự động tính toán lại diện tích ảnh hưởng ($m^2$) và xuất kết quả thành phẩm dưới dạng tập tin GeoPackage (.gpkg).
 
+---
+
 ## 🛠️ Phần mềm & Kỹ năng
 
 * **Ngôn ngữ lập trình:** Python 3.12
@@ -23,6 +25,17 @@ Chương trình này thay thế các thao tác thủ công tốn thời gian tr�
 * **Định dạng dữ liệu:** GeoPackage (`.gpkg`), Shapefile (`.shp`), CSV
 
 * **Các khái niệm chính:** Chỉ mục (Spatial Indexing), Quy trình xử lý dữ liệu vector (Vector Processing Pipelines), Tính toán diện tích tự động, Lập trình QGIS (QGIS Scripting).
+
+---
+
+## 📊 Dữ liệu đầu vào
+* `GiaoThongChinh_HCM.gpkg`: Mạng lưới các tuyến đường giao thông chính tại khu vực TP.HCM (Line, 10062 đối tượng).
+* `RanhGioi_Xa&Phuong_HCM.gpkg`: Ranh giới hành chính Xã/Phường TP.HCM (Polygon, 322 đối tượng).
+
+Dữ liệu Ranh giới Xã/Phường TP.HCM thu thập từ GADM (url:https://gadm.org/download_country.html).
+Dữ liệu vị trí các tuyến đường giao thông chính tại khu vực TP.HCM thu thập từ nguồn dữ liệu mở OpenStreetMap (OSM).
+
+---
 
 ## 📂 Cấu trúc thư mục dự án
 
@@ -51,6 +64,9 @@ batch_spatial_analysis/
 │
 └── README.md                                          # Tài liệu hướng dẫn và ghi nhận dự án
 ```
+
+---
+
 ## ⚙️ Quy trình xử lý dữ liệu không gian
 
 1. **Quản lý Cấu trúc & Xóa Dữ liệu cũ**: Tự động tạo cấu trúc thư mục làm việc và dọn dẹp các tập tin kết quả từ lần chạy trước để tránh xung  đột với dữ liệu trước.
@@ -62,6 +78,8 @@ batch_spatial_analysis/
 4. **Chồng lớp Không gian (Intersection)**: Thực hiện cắt ghép hình học giữa vùng đệm giao thông và các polygon ranh giới Xã/Phường để xác định chính xác vị trí ảnh hưởng.
 
 5. **Tính toán Thuộc tính (Field Calculator)**: Thêm trường thuộc tính Area_m2 và tự động tính toán diện tích của từng mảnh đa giác bị cắt bằng biểu thức $area.
+
+---
 
 ## 💻 Mã nguồn Python Tự động hóa (PyQGIS Script)
 
@@ -168,6 +186,9 @@ print(f"💾 Đang xuất kết quả ra file: {final_output_path}...")
 
 print("🎉 Hoàn thành toàn bộ quy trình tự động hóa phân tích không gian!")
 ```
+
+---
+
 ## ⚙️ Cách để chạy Script
 
 ### Điều kiện tiên quyết
@@ -185,6 +206,8 @@ print("🎉 Hoàn thành toàn bộ quy trình tự động hóa phân tích kh�
 4. Cập nhật các đường dẫn thư mục input/output cho phù hợp với dữ liệu cá nhân.
 
 5. Chạy script!
+
+---
 
 ## 📊 Kết quả Đầu ra
 
