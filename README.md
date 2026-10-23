@@ -67,7 +67,7 @@ batch_spatial_analysis/
 
 ---
 
-## ⚙️ Quy trình xử lý dữ liệu không gian
+## ⚙️ Quy trình Xử lý Dữ liệu Không gian
 
 1. **Quản lý Cấu trúc & Xóa Dữ liệu cũ**: Tự động tạo cấu trúc thư mục làm việc và dọn dẹp các tập tin kết quả từ lần chạy trước để tránh xung  đột với dữ liệu trước.
 
