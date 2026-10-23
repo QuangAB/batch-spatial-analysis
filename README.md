@@ -4,7 +4,7 @@
 
 Dự án này xây dựng một quy trình tự động hóa phân tích không gian hàng loạt (Batch Spatial Analysis) tại khu vực Thành phố Hồ Chí Minh bằng ngôn ngữ Python và thư viện **PyQGIS** chạy trực tiếp trong môi trường QGIS để tối ưu hóa quy trình phân tích không gian lặp đi lặp lại.
 
-Chương trình này thay thế các thao tác thủ công tốn thời gian trên phần mềm máy tính bằng một quy trình xử lý hàng loạt mạnh mẽ, giúp tự động hóa các tác vụ như:
+Quy trình này thay thế các thao tác thủ công tốn thời gian trên phần mềm máy tính bằng một quy trình xử lý hàng loạt mạnh mẽ, giúp tự động hóa các tác vụ như:
 
     1. Chuẩn hóa hệ tọa độ vuông góc phẳng quốc gia VN-2000.
 
