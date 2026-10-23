@@ -1,6 +1,6 @@
 # Công cụ Tự động hóa Phân tích Vùng đệm và Chồng lớp Không gian (PyQGIS)
 
-## 📌 Giới thiệu Dự án
+## 📌 Tổng quan Dự án
 
 Dự án này xây dựng một quy trình tự động hóa phân tích không gian hàng loạt (Batch Spatial Analysis) tại khu vực Thành phố Hồ Chí Minh bằng ngôn ngữ Python và thư viện **PyQGIS** chạy trực tiếp trong môi trường QGIS để tối ưu hóa quy trình phân tích không gian lặp đi lặp lại.
 
