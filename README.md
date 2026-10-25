@@ -1,4 +1,4 @@
-# Công cụ Tự động hóa Phân tích Vùng đệm và Chồng lớp Không gian (PyQGIS)
+# TỰ ĐỘNG HÓA PHÂN TÍCH VÙNG ĐỆM & CHỒNG LỚP KHÔNG GIAN (PYQGIS)
 
 ## 📌 Tổng quan Dự án
 
