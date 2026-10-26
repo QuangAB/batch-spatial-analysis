@@ -1,4 +1,4 @@
-# TỰ ĐỘNG HÓA PHÂN TÍCH VÙNG ĐỆM & CHỒNG LỚP KHÔNG GIAN (PYQGIS)
+# TỰ ĐỘNG HÓA PHÂN TÍCH DỮ LIỆU KHÔNG GIAN (PYQGIS)
 
 ## 📌 Tổng quan Dự án
 
@@ -6,13 +6,15 @@ Dự án này xây dựng một quy trình tự động hóa phân tích không 
 
 Quy trình này thay thế các thao tác thủ công tốn thời gian trên phần mềm máy tính bằng một quy trình xử lý hàng loạt mạnh mẽ, giúp tự động hóa các tác vụ như:
 
-    1. Chuẩn hóa hệ tọa độ vuông góc phẳng quốc gia VN-2000.
+    1. Kiểm tra và sửa lỗi hình học (topology) cho các lớp dữ liệu.
 
-    2. Tạo vùng đệm (Buffer) hành lang an toàn 50m cho hệ thống đường giao thông chính.
+    2. Chuẩn hóa hệ tọa độ vuông góc phẳng quốc gia VN-2000.
 
-    3. Giao cắt không gian (Spatial Intersection) giữa vùng đệm với ranh giới hành chính cấp Xã/Phường.
+    3. Tạo vùng đệm (Buffer) hành lang an toàn 50m cho hệ thống đường giao thông chính.
 
-    4. Tự động tính toán lại diện tích ảnh hưởng ($m^2$) và xuất kết quả thành phẩm dưới dạng tập tin GeoPackage (.gpkg).
+    4. Giao cắt không gian (Spatial Intersection) giữa vùng đệm với ranh giới hành chính cấp Xã/Phường.
+
+    5. Tự động tính toán lại diện tích ảnh hưởng ($m^2$) và xuất kết quả thành phẩm dưới dạng tập tin GeoPackage (.gpkg).
 
 ---
 
@@ -24,7 +26,7 @@ Quy trình này thay thế các thao tác thủ công tốn thời gian trên ph
 
 * **Định dạng dữ liệu:** GeoPackage (`.gpkg`), Shapefile (`.shp`), CSV
 
-* **Các khái niệm chính:** Chỉ mục (Spatial Indexing), Quy trình xử lý dữ liệu vector (Vector Processing Pipelines), Tính toán diện tích tự động, Lập trình QGIS (QGIS Scripting).
+* **Các khái niệm chính:** Chỉ mục (Spatial Indexing), Quy trình xử lý dữ liệu vector (Vector Processing Pipelines), Tính toán diện tích tự động, Lập trình PyQGIS (QGIS Scripting).
 
 ---
 
@@ -43,43 +45,48 @@ Dữ liệu vị trí các tuyến đường giao thông chính tại khu vực 
 batch_spatial_analysis/
 │
 ├── data/
-│   ├── raw/                                           # Dữ liệu vector đầu vào gốc (WGS84 - EPSG:4326)
+│   ├── raw/                                                   # Dữ liệu vector đầu vào gốc (WGS84 - EPSG:4326)
 │   │   ├── GiaoThongChinh_HCM.gpkg
 │   │   └── RanhGioi_Xa&Phuong_HCM.gpkg
 │   │
-│   └── processed/                                     # Dữ liệu trung gian sau khi chuyển hệ tọa độ VN-2000
+│   └── processed/                                             # Dữ liệu sau khi đã được xử lý theo quy trình
+│       ├── Fixed_GiaoThongChinh_HCM.gpkg
+│       ├── Fixed_RanhGioi_Xa&Phuong.gpkg
 │       ├── VN2000_GiaoThongChinh_HCM.gpkg
 │       ├── VN2000_RanhGioi_Xa&Phuong_HCM.gpkg
 │       ├── VN2000_Buffer50m_GiaoThongChinh_HCM.gpkg
 │       └── VN2000_Intersection_GiaoThong&RanhGioi_HCM.gpkg
 │
-├── output/                                            # Kết quả phân tích không gian thành phẩm
-│   └── KetQua_HanhLangGiaoThong_XaPhuong.gpkg
-│
-├── QGS_project/                                       # File dự án đinh dạng .qgz
+├── output/                                                    # Kết quả phân tích không gian thành phẩm
+│   ├── KetQua_HanhLangGiaoThong_XaPhuong.gpkg
+│   └── Mạng lưới giao thông chính khu vực TP.HCM.png
+│    
+├── QGS_project/                                               # File dự án đinh dạng .qgz
 │   └── Batch_Spatial_Analysis.qgz
 │
 ├── scripts/
-│   └── batch_spatial_analysis.py                      # Đoạn code Python tự động hóa quy trình PyQGIS
+│   └── batch_spatial_analysis.py                              # Đoạn code Python tự động hóa quy trình PyQGIS
 │
-├── batch_analysis.log                                 # Nhật ký thực hiện quy trình
+├── batch_analysis.log                                         # Nhật ký thực hiện quy trình
 │
-└── README.md                                          # Tài liệu hướng dẫn và ghi nhận dự án
+└── README.md                                                  # Tài liệu hướng dẫn và ghi nhận dự án
 ```
 
 ---
 
 ## ⚙️ Quy trình Xử lý Dữ liệu Không gian
 
-1. **Quản lý Cấu trúc & Xóa Dữ liệu cũ**: Tự động tạo cấu trúc thư mục làm việc và dọn dẹp các tập tin kết quả từ lần chạy trước để tránh xung  đột với dữ liệu trước.
+1. **Quản lý Cấu trúc & Xóa Dữ liệu cũ**: Tự động tạo cấu trúc thư mục làm việc và dọn dẹp các tập tin kết quả từ lần chạy trước để tránh xung đột với dữ liệu trước.
 
-2. **Chuyển đổi Hệ tọa độ (Reproject)**: Chuyển đổi hệ tọa độ các lớp dữ liệu vector từ hệ tọa độ địa lý WGS 84 sang hệ tọa độ quốc gia VN-2000 / TM-3 105-45 (EPSG:9210) để đảm bảo tính toán khoảng cách và diện tích theo đơn vị mét chuẩn xác.
+2. **Kiểm tra và sửa lỗi hình học (topology)**: Tiến hành kiểm tra và sửa lỗi hình học của các lớp dữ liệu trước khi đưa vào quy trình chạy xử lý hàng loạt.
 
-3. **Phân tích Vùng đệm (Buffer)**: Tạo hành lang an toàn giao thông với bán kính 50 mét xung quanh các tuyến đường chính.
+3. **Chuyển đổi Hệ tọa độ (Reproject)**: Chuyển đổi hệ tọa độ các lớp dữ liệu vector từ hệ tọa độ địa lý WGS 84 sang hệ tọa độ quốc gia VN-2000 / TM-3 105-45 (EPSG:9210) để đảm bảo tính toán khoảng cách và diện tích theo đơn vị mét chuẩn xác.
 
-4. **Chồng lớp Không gian (Intersection)**: Thực hiện cắt ghép hình học giữa vùng đệm giao thông và các polygon ranh giới Xã/Phường để xác định chính xác vị trí ảnh hưởng.
+4. **Phân tích Vùng đệm (Buffer)**: Tạo hành lang an toàn giao thông với bán kính 50 mét xung quanh các tuyến đường chính.
 
-5. **Tính toán Thuộc tính (Field Calculator)**: Thêm trường thuộc tính Area_m2 và tự động tính toán diện tích của từng mảnh đa giác bị cắt bằng biểu thức $area.
+5. **Chồng lớp Không gian (Intersection)**: Thực hiện cắt ghép hình học giữa vùng đệm giao thông và các polygon ranh giới Xã/Phường để xác định chính xác vị trí ảnh hưởng.
+
+6. **Tính toán Thuộc tính (Field Calculator)**: Thêm trường thuộc tính Area_m2 và tự động tính toán diện tích của từng mảnh đa giác bị cắt bằng biểu thức $area.
 
 ---
 
