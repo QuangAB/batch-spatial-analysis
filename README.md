@@ -14,7 +14,7 @@ Quy trình này thay thế các thao tác thủ công tốn thời gian trên ph
 
     4. Giao cắt không gian (Spatial Intersection) giữa vùng đệm với ranh giới hành chính cấp Xã/Phường.
 
-    5. Tự động tính toán lại diện tích ảnh hưởng ($m^2$) và xuất kết quả thành phẩm dưới dạng tập tin GeoPackage (.gpkg).
+    5. Tự động tính toán lại diện tích ảnh hưởng (m2) và xuất kết quả thành phẩm dưới dạng tập tin GeoPackage (.gpkg).
 
 ---
 
