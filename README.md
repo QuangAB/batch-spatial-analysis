@@ -305,3 +305,5 @@ logging.info("=== KẾT THÚC QUY TRÌNH ===")
 File kết quả: KetQua_HanhLangGiaoThong_XaPhuong.gpkg chứa 18,504 đối tượng không gian.
 
 Bảng thuộc tính tổng hợp đầy đủ thông tin về tên đường, loại đường, xã/phường tương ứng và diện tích chịu ảnh hưởng tính bằng $m^2$ (Area_m2).
+
+![](docs/architecture.png)
