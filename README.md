@@ -298,6 +298,9 @@ logging.info("=== KẾT THÚC QUY TRÌNH ===")
 
 5. Chạy script!
 
+![Kết quả chạy chương trình trong PyQGIS](output/run_scripts.png)
+*Hình 2: Kết quả chạy chương trình trong PyQGIS*
+
 ---
 
 ## 📊 Kết quả Đầu ra
@@ -307,4 +310,4 @@ File kết quả: KetQua_HanhLangGiaoThong_XaPhuong.gpkg chứa 18,504 đối t�
 Bảng thuộc tính tổng hợp đầy đủ thông tin về tên đường, loại đường, xã/phường tương ứng và diện tích chịu ảnh hưởng tính bằng $m^2$ (Area_m2).
 
 ![Mạng lưới giao thông chính khu vực TP.HCM](output/result.png)
-                                                *Hình 1.1: Mạng lưới giao thông chính khu vực TP.HCM*
+*Hình 2: Mạng lưới giao thông chính khu vực TP.HCM*
