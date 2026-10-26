@@ -23,7 +23,7 @@ logging.basicConfig(
 
 logging.info("=== BẮT ĐẦU TIẾN HÀNH PHÂN TÍCH KHÔNG GIAN ===")
 
-# Cấu hình đường dẫn và tự động tạo thư mục processed nếu chưa có
+# Cấu hình đường dẫn và tự động tạo thư mục raw nếu chưa có
 RAW_DIR = os.path.join(PROJECT_DIR, "data", "raw")
 os.makedirs(RAW_DIR, exist_ok=True)
 
