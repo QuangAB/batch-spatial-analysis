@@ -31,11 +31,12 @@ Quy trình này thay thế các thao tác thủ công tốn thời gian trên ph
 ---
 
 ## 📊 Dữ liệu đầu vào
-* `GiaoThongChinh_HCM.gpkg`: Mạng lưới các tuyến đường giao thông chính tại khu vực TP.HCM (Line, 10062 đối tượng).
-* `RanhGioi_Xa&Phuong_HCM.gpkg`: Ranh giới hành chính Xã/Phường TP.HCM (Polygon, 322 đối tượng).
 
 Dữ liệu Ranh giới Xã/Phường TP.HCM thu thập từ GADM (url:https://gadm.org/download_country.html).
 Dữ liệu vị trí các tuyến đường giao thông chính tại khu vực TP.HCM thu thập từ nguồn dữ liệu mở OpenStreetMap (OSM).
+
+* `GiaoThongChinh_HCM.gpkg`: Mạng lưới các tuyến đường giao thông chính tại khu vực TP.HCM (Line, 10062 đối tượng).
+* `RanhGioi_Xa&Phuong_HCM.gpkg`: Ranh giới hành chính Xã/Phường TP.HCM (Polygon, 322 đối tượng).
 
 ---
 
