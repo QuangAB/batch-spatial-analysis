@@ -307,4 +307,4 @@ File kết quả: KetQua_HanhLangGiaoThong_XaPhuong.gpkg chứa 18,504 đối t�
 Bảng thuộc tính tổng hợp đầy đủ thông tin về tên đường, loại đường, xã/phường tương ứng và diện tích chịu ảnh hưởng tính bằng $m^2$ (Area_m2).
 
 ![Mạng lưới giao thông chính khu vực TP.HCM](output/result.png)
-*Hình 1.1: Mạng lưới giao thông chính khu vực TP.HCM*
+                                                *Hình 1.1: Mạng lưới giao thông chính khu vực TP.HCM*
