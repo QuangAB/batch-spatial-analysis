@@ -299,7 +299,7 @@ logging.info("=== KẾT THÚC QUY TRÌNH ===")
 5. Chạy script!
 
 ![Kết quả chạy chương trình trong PyQGIS](output/run_scripts.png)
-*Hình 2: Kết quả chạy chương trình trong PyQGIS*
+*Hình 1: Kết quả chạy chương trình trong PyQGIS*
 
 ---
 
