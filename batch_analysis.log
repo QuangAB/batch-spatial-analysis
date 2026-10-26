@@ -1,0 +1,11 @@
+2026-10-26 00:50:09,173 - INFO - === BẮT ĐẦU TIẾN HÀNH PHÂN TÍCH KHÔNG GIAN ===
+2026-10-26 00:50:09,173 - INFO - Đã cấu hình đường dẫn và tạo thư mục cho dự án thành công!
+2026-10-26 00:50:09,435 - INFO - Đã kiểm tra và sửa lỗi thành công lớp dữ liệu giao thông chính!
+2026-10-26 00:50:09,488 - INFO - Đã kiểm tra và sửa lỗi hình học thành công lớp dữ liệu ranh giới Xã/Phường!
+2026-10-26 00:50:09,733 - INFO - Đã chuyển thành công hệ tọa độ cho lớp dữ liệu giao thông chính!
+2026-10-26 00:50:09,780 - INFO - Đã chuyển thành công hệ tọa độ cho lớp dữ liệu ranh giới Xã/Phường TP.HCM!
+2026-10-26 00:50:10,298 - INFO - Đã Buffer 50m thành công lớp dữ liệu giao thông chính!
+2026-10-26 00:50:15,388 - INFO - Đã Intersection thành công giữa vùng đệm giao thông và ranh giới Xã/Phường!
+2026-10-26 00:50:16,464 - INFO - Đã tính diện tích phần bị ảnh hưởng thành công!
+2026-10-26 00:50:16,472 - INFO - Đã xuất file kết quả thành công!
+2026-10-26 00:50:16,474 - INFO - === KẾT THÚC QUY TRÌNH ===
