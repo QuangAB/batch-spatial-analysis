@@ -48,11 +48,11 @@ Dữ liệu vị trí các tuyến đường giao thông chính tại khu vực 
 batch_spatial_analysis/
 │
 ├── data/
-│   ├── raw/                                                   # Dữ liệu vector đầu vào gốc (WGS84 - EPSG:4326)
+│   ├── raw/                                                      # Dữ liệu vector đầu vào gốc (WGS84 - EPSG:4326)
 │   │   ├── GiaoThongChinh_HCM.gpkg
 │   │   └── RanhGioi_Xa&Phuong_HCM.gpkg
 │   │
-│   └── processed/                                             # Dữ liệu sau khi đã được xử lý theo quy trình
+│   └── processed/                                                # Dữ liệu sau khi đã được xử lý theo quy trình
 │       ├── Fixed_GiaoThongChinh_HCM.gpkg
 │       ├── Fixed_RanhGioi_Xa&Phuong.gpkg
 │       ├── VN2000_GiaoThongChinh_HCM.gpkg
@@ -61,19 +61,19 @@ batch_spatial_analysis/
 │       └── VN2000_Intersection_GiaoThong&RanhGioi_HCM.gpkg
 │
 ├── output/
-│   ├── KetQua_HanhLangGiaoThong_XaPhuong.gpkg                 # Kết quả phân tích không gian thành phẩm
-│   ├── run_scripts.png                                        # Kết quả chạy chương trình trong PyQGIS
-│   └── result.png                                             # Kết quả thu được sau khi thực hiện phân tích dữ liệu không gian tự động thành công  
+│       ├── KetQua_HanhLangGiaoThong_XaPhuong.gpkg                 # Kết quả phân tích không gian thành phẩm
+│       ├── run_scripts.png                                        # Kết quả chạy chương trình trong PyQGIS
+│       └── result.png                                             # Kết quả thu được sau khi thực hiện phân tích dữ liệu không gian tự động thành công  
 │    
-├── QGS_project/                                               # File dự án đinh dạng .qgz
-│   └── Batch_Spatial_Analysis.qgz
+├── QGS_project/                                                   # File dự án đinh dạng .qgz
+│       └── Batch_Spatial_Analysis.qgz
 │
 ├── scripts/
-│   └── batch_spatial_analysis.py                              # Đoạn code Python tự động hóa quy trình PyQGIS
+│       └── batch_spatial_analysis.py                              # Đoạn code Python tự động hóa quy trình PyQGIS
 │
-├── batch_analysis.log                                         # Nhật ký thực hiện quy trình
+├── batch_analysis.log                                             # Nhật ký thực hiện quy trình
 │
-└── README.md                                                  # Tài liệu hướng dẫn và ghi nhận dự án
+└── README.md                                                      # Tài liệu hướng dẫn và ghi nhận dự án
 ```
 
 ---
