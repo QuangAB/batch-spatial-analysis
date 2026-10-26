@@ -314,3 +314,15 @@ Bảng thuộc tính tổng hợp đầy đủ thông tin về tên đường, l
 
 ![Kết quả thu được sau khi thực hiện phân tích dữ liệu không gian tự động thành công](output/result.png)
 *Hình 2: Kết quả thu được sau khi thực hiện phân tích dữ liệu không gian tự động thành công*
+
+---
+
+## 📊 Ứng dụng thực tế
+
+* **Quản lý và Bảo vệ hành lang An toàn Giao thông.**
+
+* **Hỗ trợ Giải phóng Mặt bằng & Đền bù Quy hoạch.**
+ 
+* **Quy hoạch & Đánh giá Tác động Hạ tầng Đô thị.**
+
+* **Tự động hóa Quy trình Nghiệp vụ GIS (GIS Automation).**
