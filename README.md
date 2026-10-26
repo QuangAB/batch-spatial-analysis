@@ -20,13 +20,15 @@ Quy trình này thay thế các thao tác thủ công tốn thời gian trên ph
 
 ## 🛠️ Phần mềm & Kỹ năng
 
+* **Phần mềm GIS:** QGIS 3.44.15
+
 * **Ngôn ngữ lập trình:** Python 3.12
 
 * **Thư viện:** PyQGIS (`qgis.core`, `processing`)
 
-* **Định dạng dữ liệu:** GeoPackage (`.gpkg`), Shapefile (`.shp`), CSV
+* **Định dạng dữ liệu:** GeoPackage (`.gpkg`)
 
-* **Các khái niệm chính:** Chỉ mục (Spatial Indexing), Quy trình xử lý dữ liệu vector (Vector Processing Pipelines), Tính toán diện tích tự động, Lập trình PyQGIS (QGIS Scripting).
+* **Các khái niệm chính:** Chỉ mục (Spatial Indexing), Quy trình xử lý dữ liệu vector (Vector Processing Pipelines), Phân tích dữ liệu không gian tự động, Lập trình PyQGIS (QGIS Scripting).
 
 ---
 
@@ -120,7 +122,7 @@ logging.basicConfig(
 
 logging.info("=== BẮT ĐẦU TIẾN HÀNH PHÂN TÍCH KHÔNG GIAN ===")
 
-# Cấu hình đường dẫn và tự động tạo thư mục processed nếu chưa có
+# Cấu hình đường dẫn và tự động tạo thư mục raw nếu chưa có
 RAW_DIR = os.path.join(PROJECT_DIR, "data", "raw")
 os.makedirs(RAW_DIR, exist_ok=True)
 
