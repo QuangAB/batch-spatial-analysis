@@ -58,9 +58,10 @@ batch_spatial_analysis/
 │       ├── VN2000_Buffer50m_GiaoThongChinh_HCM.gpkg
 │       └── VN2000_Intersection_GiaoThong&RanhGioi_HCM.gpkg
 │
-├── output/                                                    # Kết quả phân tích không gian thành phẩm
-│   ├── KetQua_HanhLangGiaoThong_XaPhuong.gpkg
-│   └── Mạng lưới giao thông chính khu vực TP.HCM.png
+├── output/
+│   ├── KetQua_HanhLangGiaoThong_XaPhuong.gpkg                 # Kết quả phân tích không gian thành phẩm
+│   ├── run_scripts.png                                        # Kết quả chạy chương trình trong PyQGIS
+│   └── result.png                                             # Kết quả thu được sau khi thực hiện phân tích dữ liệu không gian tự động thành công  
 │    
 ├── QGS_project/                                               # File dự án đinh dạng .qgz
 │   └── Batch_Spatial_Analysis.qgz
@@ -309,5 +310,5 @@ File kết quả: KetQua_HanhLangGiaoThong_XaPhuong.gpkg chứa 18,504 đối t�
 
 Bảng thuộc tính tổng hợp đầy đủ thông tin về tên đường, loại đường, xã/phường tương ứng và diện tích chịu ảnh hưởng tính bằng $m^2$ (Area_m2).
 
-![Mạng lưới giao thông chính khu vực TP.HCM](output/result.png)
-*Hình 2: Mạng lưới giao thông chính khu vực TP.HCM*
+![Kết quả thu được sau khi thực hiện phân tích dữ liệu không gian tự động thành công](output/result.png)
+*Hình 2: Kết quả thu được sau khi thực hiện phân tích dữ liệu không gian tự động thành công*
